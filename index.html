@@ -1,208 +1,71 @@
+﻿
+
+
 <html>
     <head>
-        
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">       
-          <link rel="stylesheet" href="index_style.css"/>   
+<link rel="stylesheet" href="css/fontawesome-all.min.css"/>    
 
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
-        
-   
+<link rel="stylesheet" href="css/bootstrap.min.css"/>    
+<link rel="stylesheet" href="css/index_style.css"/>
+    
     </head>
-    <body>  
-       
-        <label class="mt-5">Username</label>
-        <input onkeyup ="validate()" id="name" 
-        type="text" class="form-control" name = "name">
-
-
-
-        <label>Password</label>
-        <input onkeyup ="validate()" id="name" 
-        type="text" class="form-control">
-
-        <label>Phone</label>
-        <input onkeyup="validate()" name='phone'>
-
-
-
-
-    <div class="home">
-      <div class="nav"> 
-    <ul>
-       <li  class="logo" > <img src="logo-dark.png" ></li>      
-        <li> <button    > Contact </button></li>
-        <li> <a> Home </a></li>
-         <li> <a> about </a></li>
-        <li> <a> about </a></li>
-         <li> <a> services </a></li>
-        <li> <a> pricing </a></li>
-         <li> <a> news </a></li>
-        </ul>
     
-    </div>
-        <h3> Time to change your business </h3>
-        <h1>Our small and medium business solutions helped grow over a hundred companies. </h1>
-        <button class="x"> learn more </button>
-    </div>
-  
     
-    <div class="member" >
-            
-             <h2>   Private Solutions </h2>
-                <p style="color: gray ; text-align: center ; "> Morbi pellentesque, nisl id semper bibendum, nibh sem fermentum magna, eget commodo. </p>
-         </div> 
-          <div class="member">
-           
-             <h2>   Small Business Discounts</h2>
-                <p style="color: gray ; text-align: center ; "> Morbi pellentesque, nisl id semper bibendum, nibh sem fermentum magna, eget commodo.</p>
-         </div> 
-     <div  class="member">
-             
-             <h2>   Satisfied Clients</h2>
-                <p style="color: gray ; text-align: center ; "> Morbi pellentesque, nisl id semper bibendum, nibh sem fermentum magna, eget commodo. </p>
-         </div> 
-         
-         <div class="third">
-             <h6 style="padding: 20px; font-size: 30px; text-align: center; margin-bottom: 0px;"> Our Services </h6>
-             <p style=" font-size: 20px;  text-align: center;color:whitesmoke" > This is a subtitle, feel free to change it!</p>
-             
-             
-             
-             <div class="photo" >
-             <img src="full-6-600x420.jpg">
-             <h2 style="font-size: 30px; ">item title</h2>
-                <p style="color:darkgrey; font-size: 20px; ">Monec quis rhoncus augue. In fermentum eget neque tristique scelerisque. Morbi at elemen nisi. Quisque pellentesque. </p>
-         </div> 
-          <div class="photo">
-             <img src="full-5-600x420.jpg">
-             <h2 style="font-size: 30px;">   cool idea </h2>
-                <p style="color:darkgrey; font-size: 20px; ">Monec quis rhoncus augue. In fermentum eget neque tristique scelerisque. Morbi at elemen nisi. Quisque pellentesque. </p>
-         </div> 
-          <div class="photo">
-             <img  src="full-4-600x420.jpg">
-             <h2 style="font-size: 30px; ">   premium support   </h2>
-                <p style="color:darkgrey; font-size: 20px; ">Monec quis rhoncus augue. In fermentum eget neque tristique scelerisque. Morbi at elemen nisi. Quisque pellentesque. </p>
-         </div> 
-    
-    </div>
-
-
-
-
-<!-- start of habiba part-->
-
-
-<div class="container py-3">
-    
-
-                    <h2>
-                        Phone Book <button id="showhide" onclick="toggleform()" class="btn btn-warning btn-sm"> hide</button>
-                    </h2>
-    <div id="form-container">
-
-                    <div class="form-group">
-                        <label>username :</label>
-                        <input class="form-control" type="text" id="uname"/>
-                        
-                    </div>
-
-                    <div class="form-group">
-                        <label>age :</label>
-                        <input class="form-control" type="text" id="uage"/>
-                        
-                    </div>
-
-                    <div class="form-group">
-                        <label>date of brith :</label>
-                        <input class="form-control" type="text" id="udate"/>
-                        
-                    </div>
-
-                    <div class="form-group">
-                        <label>salary :</label>
-                        <input class="form-control" type="text" id="usalary"/>
-                        
-                    </div>
-
-                <button onclick="addrecord()" class="BTN btn-info float-right">ADD</button>
-                <div class="clearfix"> </div>
-    </div>
-<div class="container py-4 text-center">
-
-    <table class="table text-center">
-            <thead>
-
-                <th>Name:</th>
-                <th>Age</th>
-                <th>DateOfBrith</th>
-                <th>Salarty</th>
-                
-            </thead>
-
-
-            <tbody id="bodypart">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                </tr>
-
-            </tbody>
+    <body id="game" >
         
+        <canvas id="c"></canvas>
+        
+    <!--    
+    <audio controls  id="gameAudio">
+    <source src="bullet.mp3"/>    
+    </audio>    
+        
+    <audio   id="bulletAudio">
+    <source src="M1%20Garand%20Gunfire-SoundBible.com-697264290.wav"/>    
+    </audio>            
 
+<div id="all">
+        
+<img id="bullet" src="images/Bullet.png"/>        
+<img id="rocket" src="images/rocket.gif"/>        
 
+</div>  
+-->
+        
+      
+        
+    <!--    
+        
+    <div class="container py-3">
+        
+    <div class="form-group">
+        <label>username :</label>
+        <input name="username" type="text" class="form-control"/> <span class="text-muted">username must contain .....</span>   
 
-    </table>
+    </div>    
     
+        
+    <div class="form-group">
+        <label>userphone :</label>
+        <input name="userphone" type="text" class="form-control"/> <span class="text-muted">username must contain .....</span>   
 
+    </div> 
+        
+        
+        
+    <div class="form-group">
+        <label>usermail :</label>
+        <input name="usermail" type="text" class="form-control"/> <span class="text-muted">username must contain .....</span>   
 
+    </div>         
+        
+        
+        
 </div>
-</div>
-
-<!--end of habiba part-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-  
-    
-
-
-
-
-
-        <script src="index.js"></script>        
-
+-->
+        
+        
+        
+     <script src="mine.js"></script>        
     </body>
 </html>
