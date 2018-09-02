@@ -24,7 +24,8 @@
          }
         img {
     width: 100%; 
-    
+
+
 }
         .member {
                 text-align: center;
@@ -153,7 +154,9 @@
      
   
 }
-
+.reem {
+    font: Arial;
+}
 .fm .wid{
     width: 40%;
     display: inline-block; 
